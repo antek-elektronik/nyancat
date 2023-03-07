@@ -13,25 +13,31 @@ namespace nyancat
 {
     public partial class Form1 : Form
     {
-        int nyanAnimationFrame = 0;
+
         int rainbowAnimationFrame = 0;
         List<Control> panels = new List<Control>();
 
+        NyanCat nyanCat = new NyanCat();
+        RainbowForm rainbow = new RainbowForm();
+
         public Form1()
         {
+            
+
             InitializeComponent();
 
-            //moveWindow nyanMoveable = new moveWindow(this, panel1);
+            Timer rainbowTimer = new Timer();
+            rainbowTimer.Interval = 1;
+            rainbowTimer.Tick += new EventHandler(rainbowAnimationTick);
+            rainbowTimer.Start();
 
-            Timer nyanTimer = new Timer();
-            nyanTimer.Interval = 50;
-            nyanTimer.Tick += new EventHandler(nyanAnimationTick);
-            nyanTimer.Start();
+            nyanCat.Show();
+            rainbow.Show();
 
-            SoundPlayer nyanSound = new SoundPlayer(@"nyancat.wav");
-            nyanSound.Play();
+            //this.WindowState = FormWindowState.Maximized;
 
-            this.WindowState = FormWindowState.Maximized;
+            /*
+            
             panel1.Location= new Point(this.Width / 2, this.Height / 2);
 
             int color = 0;
@@ -68,8 +74,18 @@ namespace nyancat
             rainbowTimer.Interval = 300;
             rainbowTimer.Tick += new EventHandler(rainbowAnimationTick);
             rainbowTimer.Start();
+
+            */
+
+        }
+       
+        private void rainbowAnimationTick (object sender, EventArgs e)
+        {
+            rainbow.catPosition = nyanCat.Location;
+            rainbow.catSize = nyanCat.Size;
         }
 
+        /*
         private void rainbowAnimationTick(object sender, EventArgs e)
         {
             for(int i = 0; i < panels.Count; i++)
@@ -112,51 +128,9 @@ namespace nyancat
 
             
         }
+        */
 
-        private void nyanAnimationTick(object sender, EventArgs e)
-        {
-            switch (nyanAnimationFrame) {
-                case 0:
-                    panel1.BackgroundImage = Properties.Resources._0;
-                    break;
-                case 1:
-                    panel1.BackgroundImage = Properties.Resources._1;
-                    break;
-                    case 2:
-                    panel1.BackgroundImage = Properties.Resources._2;
-                    break;
-                    case 3:
-                        panel1.BackgroundImage = Properties.Resources._3;
-                                        break;
-                    case 4:
-                    panel1.BackgroundImage = Properties.Resources._4;
-                    break;
-                    case 5:
-                    panel1.BackgroundImage = Properties.Resources._5;
-                                        break;
-                    case 6:
-                    panel1.BackgroundImage = Properties.Resources._6;
-                                        break;
-                    case 7:
-                    panel1.BackgroundImage = Properties.Resources._7;
-                                        break;
-                    case 8:
-                    panel1.BackgroundImage = Properties.Resources._8;
-                    break;
-                    case 9:
-                    panel1.BackgroundImage = Properties.Resources._9;
-                                        break;
-                    case 10:
-                    panel1.BackgroundImage = Properties.Resources._10;
-                                        break;
-                    case 11:
-                    panel1.BackgroundImage = Properties.Resources._11;
-                                        break;
-            }
-
-            nyanAnimationFrame++;
-            if(nyanAnimationFrame> 10) { nyanAnimationFrame = 0; }
-        }
+        
 
         private void animationspeedToolStripMenuItem_Click(object sender, EventArgs e)
         {
