@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // zestaw atrybutów. Zmień wartości tych atrybutów, aby zmodyfikować informacje
 // powiązane z zestawem.
 [assembly: AssemblyTitle("nyancat")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("interactive nyan cat animation on your conputer screen!")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("AntekElektronik [Antoni Gzara]")]
 [assembly: AssemblyProduct("nyancat")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
