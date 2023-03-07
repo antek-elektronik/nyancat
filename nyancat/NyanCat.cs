@@ -27,7 +27,7 @@ namespace nyancat
             nyanTimer.Tick += new EventHandler(nyanAnimationTick);
             nyanTimer.Start();
 
-            SoundPlayer nyanSound = new SoundPlayer(@"nyancat.wav");
+            SoundPlayer nyanSound = new SoundPlayer(Properties.Resources.nyancat);
             nyanSound.Play();
         }
 
