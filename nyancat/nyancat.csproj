@@ -65,6 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +79,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\original.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\0.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\5.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\6.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\7.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\8.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\10.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\11.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
